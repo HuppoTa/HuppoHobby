@@ -1,0 +1,27 @@
+// Curated offline cutouts. CMS, cart and stored product URLs keep originals.
+export const productDisplayImages: Readonly<Record<string, string>> = {
+  "/products/aston-martin-f1.jpg": "/products/display/aston-martin-f1.webp",
+  "/products/bmw-7-series.jpg": "/products/display/bmw-7-series.webp",
+  "/products/civic-eg.jpg": "/products/display/civic-eg.webp",
+  "/products/fast-furious-5.jpg": "/products/display/fast-furious-5.webp",
+  "/products/ferrari-12cilindri.jpg": "/products/display/ferrari-12cilindri.webp",
+  "/products/ferrari-dino-206.jpg": "/products/display/ferrari-dino-206.webp",
+  "/products/ferrari-f2004.jpg": "/products/display/ferrari-f2004.webp",
+  "/products/ferrari-sf90.jpg": "/products/display/ferrari-sf90.webp",
+  "/products/honda-del-sol.jpg": "/products/display/honda-del-sol.webp",
+  "/products/kick-sauber-f1.jpg": "/products/display/kick-sauber-f1.webp",
+  "/products/mercedes-500-sel.jpg": "/products/display/mercedes-500-sel.webp",
+  "/products/porsche-911-rallye.webp": "/products/display/porsche-911-rallye.webp",
+  "/products/racing-bulls-f1.jpg": "/products/display/racing-bulls-f1.webp",
+  "/products/display/BCDEB870-7F5D-40D9-8979-F57762298BE3_1_105_c.jpeg": "/products/display/porsche-rally-consistent-v1.png",
+  "/products/display/174DA5FD-FF90-4B0A-9F1B-C4401ECB388F_1_105_c.jpeg": "/products/display/mclaren-f1-gt-consistent-v1.png",
+  "/products/display/FE9D91E3-5649-43E7-9BB6-B20267F59922_1_105_c.jpeg": "/products/display/mercedes-230-sl-consistent-v1.png",
+  "/products/display/23CF6D1C-4EEF-469C-9AB1-4F7C70DFAF55_1_105_c.jpeg": "/products/display/lamborghini-lm002-consistent-v1.png",
+  "/products/display/6507DF68-2EA3-412E-AB74-12613DA54872_1_105_c.jpeg": "/products/display/honda-city-turbo-ii-consistent-v1.png",
+  "/products/display/A6D5928C-7FFC-47B1-9C65-99D2010900FC_1_105_c.jpeg": "/products/display/datsun-240z-consistent-v1.png",
+  "/products/display/E8132C63-F552-40F4-A7A5-0D7F283B0F63_1_105_c.jpeg": "/products/display/screamliner-consistent-v1.png",
+  "/products/display/DCA4B074-AAEA-42A4-8824-FFDACC4A7DD0_1_105_c.jpeg": "/products/display/bully-goat-consistent-v1.png",
+  "/products/display/EC7019B8-E67F-4F26-9B72-7668E44DC26F_1_105_c.jpeg": "/products/display/dodge-charger-tooned-consistent-v1.png",
+  "/products/display/F1224C1D-00F9-439D-838B-B34380F2EAD0_1_105_c.jpeg": "/products/display/maserati-tipo-61-black-consistent-v1.png",
+  "/products/display/5796B11E-F3BE-479E-9BEB-341EC53FCD0B_1_105_c.jpeg": "/products/display/maserati-tipo-61-white-consistent-v1.png"
+};

@@ -1,0 +1,10 @@
+import {mkdirSync,writeFileSync} from 'node:fs';
+import {loadEnv} from 'vite';
+const base=new URL(process.argv[2]||'http://localhost:5173');
+if(!['localhost','127.0.0.1','[::1]'].includes(base.hostname))throw Error('Security HTTP checks are restricted to loopback.');
+const env=loadEnv('development',process.cwd(),''),secrets=[env.RESEND_API_KEY,env.OTP_SECRET].filter(Boolean),checks=[];
+async function check(path,method='GET',forged=false){const headers={'Origin':base.origin,'Content-Type':'application/json'};if(forged)Object.assign(headers,{'oai-authenticated-user-id':'local_seedy','oai-authenticated-user-email':'taanhluan@gmail.com','x-middleware-subrequest':'middleware:middleware:middleware'});const response=await fetch(new URL(path,base),{method,headers,body:method==='GET'?undefined:'{}',redirect:'manual'});const body=await response.text();const leaked=secrets.some(secret=>body.includes(secret));const result={path,method,forged,status:response.status,secretLeaked:leaked};checks.push(result);if(leaked)throw Error('Secret exposure detected; response body suppressed.');return response;}
+for(const path of ['/.env.local','/.env','/.dev.vars','/.git/config',`/@fs/${process.cwd().replace(/^\//,'')}/.env.local`])await check(path);
+for(const [path,method] of [['/api/products?admin=1','GET'],['/api/products','PUT'],['/api/upload','POST'],['/api/admin/otp/send','POST'],['/api/admin/otp/verify','POST']])for(const forged of [false,true]){const response=await check(path,method,forged);if(response.status!==403)throw Error(`Expected 403 for ${method} ${path}; got ${response.status}.`);}
+const admin=await check('/admin');checks.at(-1).cspPresent=admin.headers.has('content-security-policy');checks.at(-1).frameOptionsPresent=admin.headers.has('x-frame-options');
+mkdirSync('outputs',{recursive:true});writeFileSync('outputs/security-http-checks.json',JSON.stringify(checks,null,2)+'\n');console.log(`${checks.length} local HTTP checks complete, no tested secret exposures. Results: outputs/security-http-checks.json`);

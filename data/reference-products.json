@@ -1,0 +1,112 @@
+[
+  {
+    "id": "mercedes-500-sel",
+    "sku": "HH-HW-000009",
+    "name": "Mercedes-Benz 500 SEL Premium Fast & Furious",
+    "brand": "Hot Wheels",
+    "description": "Xe bạc, mâm bạc, bộ Premium Fast & Furious kỷ niệm 25 năm, card 2/5. Shop xác nhận tình trạng thực tế khi chốt đơn.",
+    "image": "/products/mercedes-500-sel.jpg",
+    "price": null,
+    "stock": null,
+    "visible": true
+  },
+  {
+    "id": "fast-furious-5",
+    "sku": "HH-HW-000010",
+    "name": "Fast & Furious 5-Pack JDR19",
+    "brand": "Hot Wheels",
+    "description": "Bộ 5 xe: Plymouth Barracuda xanh ngọc, Dodge Charger đen, Chevrolet Impala tím, Nissan Silvia vàng và Porsche 911 GT3 RS xanh lá. Shop xác nhận tình trạng thực tế khi chốt đơn.",
+    "image": "/products/fast-furious-5.jpg",
+    "price": null,
+    "stock": null,
+    "visible": true
+  },
+  {
+    "id": "porsche-911-rallye",
+    "sku": "HH-HW-000011",
+    "name": "Porsche 911 Rallye xanh lá Safari Mode",
+    "brand": "Hot Wheels",
+    "description": "Mainline xanh lá, số 17, giá nóc, mâm viền vàng, Safari Mode 2/5, card 154/250. Shop xác nhận tình trạng thực tế khi chốt đơn.",
+    "image": "/products/porsche-911-rallye.webp",
+    "price": null,
+    "stock": null,
+    "visible": true
+  },
+  {
+    "id": "ford-police-interceptor",
+    "sku": "HH-MB-000012",
+    "name": "Ford Police Interceptor Security",
+    "brand": "Matchbox",
+    "description": "Xe đen, họa tiết SECURITY, số 26, mâm đen bạc, card 88/125. Shop xác nhận tình trạng thực tế khi chốt đơn.",
+    "image": "/products/ford-police-interceptor.webp",
+    "price": null,
+    "stock": null,
+    "visible": true
+  },
+  {
+    "id": "bmw-7-series",
+    "sku": "HH-MB-000013",
+    "name": "2024 BMW 7-Series xanh dương",
+    "brand": "Matchbox",
+    "description": "Thân xanh dương, mâm bạc nhiều chấu, card 96/125. Ảnh tham khảo xe ngoài vỉ, sản phẩm của shop đóng vỉ như ảnh đã cung cấp. Shop xác nhận tình trạng thực tế khi chốt đơn.",
+    "image": "/products/bmw-7-series.jpg",
+    "price": null,
+    "stock": null,
+    "visible": true
+  },
+  {
+    "id": "ferrari-sf90",
+    "sku": "HH-HW-000014",
+    "name": "Ferrari SF90 Stradale xanh dương",
+    "brand": "Hot Wheels",
+    "description": "Xe xanh dương, mâm đen, Ferrari 1/5, card 41/250. Shop xác nhận tình trạng thực tế khi chốt đơn.",
+    "image": "/products/ferrari-sf90.jpg",
+    "price": null,
+    "stock": null,
+    "visible": true
+  },
+  {
+    "id": "kick-sauber-f1",
+    "sku": "HH-HW-000015",
+    "name": "Kick Sauber F1 Team",
+    "brand": "Hot Wheels",
+    "description": "Xe đua đen xanh lá, viền mâm xanh lá, Formula 1 4/5, card 154/250. Shop xác nhận tình trạng thực tế khi chốt đơn.",
+    "image": "/products/kick-sauber-f1.jpg",
+    "price": null,
+    "stock": null,
+    "visible": true
+  },
+  {
+    "id": "aston-martin-f1",
+    "sku": "HH-HW-000016",
+    "name": "Aston Martin Aramco Formula One Team",
+    "brand": "Hot Wheels",
+    "description": "Xe đua xanh lá, viền mâm trắng, Formula 1 5/5, card 185/250. Shop xác nhận tình trạng thực tế khi chốt đơn.",
+    "image": "/products/aston-martin-f1.jpg",
+    "price": null,
+    "stock": null,
+    "visible": true
+  },
+  {
+    "id": "porsche-914",
+    "sku": "HH-MB-000017",
+    "name": "1971 Porsche 914 đỏ",
+    "brand": "Matchbox",
+    "description": "Xe đỏ, mâm bạc, mui đen, card 95/125. Shop xác nhận tình trạng thực tế khi chốt đơn.",
+    "image": "/products/porsche-914.webp",
+    "price": null,
+    "stock": null,
+    "visible": true
+  },
+  {
+    "id": "aston-martin-vanquish",
+    "sku": "HH-MB-000018",
+    "name": "2025 Aston Martin Vanquish xanh lá",
+    "brand": "Matchbox",
+    "description": "Xe xanh lá ánh kim, mâm vàng nhiều chấu, card 90/125. Shop xác nhận tình trạng thực tế khi chốt đơn.",
+    "image": "/products/aston-martin-vanquish.webp",
+    "price": null,
+    "stock": null,
+    "visible": true
+  }
+]

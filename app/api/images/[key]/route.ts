@@ -1,0 +1,2 @@
+import {bucket,storageError} from "@/lib/server";
+export async function GET(req:Request,{params}:{params:Promise<{key:string}>}){const {key}=await params;if(!/^[a-zA-Z0-9_.-]+$/.test(key))return new Response("Not found",{status:404});try{const item=await bucket().get(key);if(!item)return new Response("Not found",{status:404});return new Response(item.body,{headers:{"Content-Type":item.httpMetadata?.contentType||"application/octet-stream","X-Content-Type-Options":"nosniff","Cache-Control":"public,max-age=86400"}})}catch(e){return storageError(e)}}

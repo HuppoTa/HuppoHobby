@@ -1,0 +1,4 @@
+ALTER TABLE `products` ADD `sku` text DEFAULT '' NOT NULL;--> statement-breakpoint
+UPDATE products SET sku = CASE id WHEN 'civic-eg' THEN 'HH-HW-000001' WHEN 'honda-del-sol' THEN 'HH-HW-000002' WHEN 'ferrari-dino-206' THEN 'HH-HW-000003' WHEN 'ferrari-12cilindri' THEN 'HH-HW-000004' WHEN 'ferrari-f2004' THEN 'HH-HW-000005' WHEN 'racing-bulls-f1' THEN 'HH-HW-000006' WHEN 'porsche-rally' THEN 'HH-MB-000007' WHEN 'porsche-918' THEN 'HH-MB-000008' ELSE 'HH-' || CASE brand WHEN 'Hot Wheels' THEN 'HW' WHEN 'Matchbox' THEN 'MB' ELSE 'OT' END || '-' || printf('%06d', rowid + 1000) END;
+--> statement-breakpoint
+CREATE UNIQUE INDEX `products_sku_unique` ON `products` (upper("sku"));
