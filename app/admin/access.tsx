@@ -28,5 +28,5 @@ export default function AdminAccess({configured}:{configured:boolean}) {
  {sent&&<form onSubmit={verify}><label htmlFor="otp-code">Mã xác nhận gồm 6 chữ số</label><input id="otp-code" name="code" autoFocus type="text" inputMode="numeric" autoComplete="one-time-code" pattern="[0-9]{6}" maxLength={6} required value={code} placeholder="000000" onChange={e=>setCode(e.target.value.replace(/\D/g,""))}/><small>Mã có hiệu lực 10 phút. Phiên quản lý kéo dài 8 giờ.</small><button className="button-primary" disabled={busy||code.length!==6}>{busy?"Đang xác nhận…":"Vào CMS"}</button></form>}
  <button className={sent?"button-secondary":"button-primary"} disabled={busy||remaining>0} onClick={()=>void requestCode()}><Mail size={17}/>{remaining>0?`Gửi lại sau ${remaining} giây`:sent?"Gửi mã mới":"Gửi mã xác nhận"}</button></>}
  {message&&<p role="status" aria-live="polite" className="editor-message">{message}</p>}
- <div className="admin-access-links"><Link href="/">Về cửa hàng</Link><a href="/signout-with-chatgpt?return_to=/admin">Đổi tài khoản</a></div></section></main>;
+ <div className="admin-access-links"><Link href="/">Về cửa hàng</Link></div></section></main>;
 }

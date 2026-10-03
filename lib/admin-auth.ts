@@ -1,6 +1,6 @@
-import {env} from "cloudflare:workers";
+
 import {cookies} from "next/headers";
-import {getChatGPTUser} from "@/app/chatgpt-auth";
+
 import {database} from "./storage";
 import {digest} from "./otp-crypto";
 
@@ -9,12 +9,10 @@ export const SESSION_COOKIE="huppo_admin_session";
 export const CHALLENGE_COOKIE="huppo_admin_challenge";
 export const OTP_TTL=600;
 export const SESSION_TTL=8*60*60;
-export async function allowedAdmin() {
- const user=await getChatGPTUser();
- return user?.email.toLowerCase()===ADMIN_EMAIL?user:null;
-}
+// Identity is server-owned; public Sites headers are never trusted on Vercel.
+export async function allowedAdmin(){return {email:ADMIN_EMAIL,userId:"huppo-owner"};}
 export function emailConfiguration() {
- const config=env as unknown as Record<string,string|undefined>;
+ const config=process.env;
  if(!config.RESEND_API_KEY||!config.OTP_SECRET||config.OTP_SECRET.length<32||!config.OTP_EMAIL_FROM) return null;
  return {apiKey:config.RESEND_API_KEY,secret:config.OTP_SECRET,from:config.OTP_EMAIL_FROM};
 }

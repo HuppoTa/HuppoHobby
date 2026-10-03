@@ -1,0 +1,10 @@
+.env*
+.dev.vars*
+.git
+Docs
+outputs
+.wrangler
+.sites-runtime
+.openai
+node_modules
+tests
